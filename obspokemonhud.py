@@ -326,7 +326,7 @@ def update_sprite_sources(source_name, team_slot):
             sprite_map['sprites'],
             team_slot['shiny'],
             team_slot["dexnumber"],
-            None
+            team_slot['form'],
         )
         location = cache_image(
             sprite,
@@ -347,7 +347,7 @@ def update_sprite_sources(source_name, team_slot):
         obs.obs_source_release(source)
 
 
-def get_sprite_location(urls, sprites, shiny, dex_number, variant):
+def get_sprite_location(urls, sprites, shiny, dex_number, form):
     # If debug is enabled, print out this bit of text
     if debug:
         print("Function: Get Sprite sources")
@@ -362,8 +362,8 @@ def get_sprite_location(urls, sprites, shiny, dex_number, variant):
         print("I don't belong")
         return
 
-    if variant in sprites[str(dex_number)].keys():
-        return link + sprites[str(dex_number)][variant]
+    if form in sprites[str(dex_number)].keys():
+        return link + sprites[str(dex_number)][form]
 
     # If the given forms, genders, etc aren't available, just give the standard
     # sprite
