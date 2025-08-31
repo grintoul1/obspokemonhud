@@ -25,6 +25,7 @@
             "standard": "ivysaur.gif"
         },
         "3": {
+            "mega": "venusaur-mega.gif",
             "standard": "venusaur.gif"
         },
         "4": {
@@ -46,7 +47,8 @@
             "standard": "wartortle.gif"
         },
         "9": {
-            "standard": "blastoise.gif"
+            "standard": "blastoise.gif",
+            "mega": "blastoise-mega.gif"
         },
         "10": {
             "standard": "caterpie.gif"
@@ -2201,7 +2203,8 @@
             "standard": "tornadus.gif"
         },
         "642": {
-            "standard": "thundurus.gif"
+            "standard": "thundurus.gif",
+            "therian": "thundurus-therian.gif"
         },
         "643": {
             "standard": "reshiram.gif"
@@ -2273,7 +2276,8 @@
             "standard": "spewpa.gif"
         },
         "666": {
-            "standard": "vivillon.gif"
+            "standard": "vivillon.gif",
+            "ocean": "vivillon-ocean.gif"
         },
         "667": {
             "standard": "litleo.gif"
