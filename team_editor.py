@@ -91,7 +91,7 @@ def script_properties():
         "team_member_dex_1",  # Setting identifier string
         "Member 1 (Dex No.)",  # display name
         0,  # Starting number
-        898,  # Ending number
+        1025,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -105,7 +105,7 @@ def script_properties():
         "team_member_dex_2",  # Setting identifier string
         "Member 2 (Dex No.)",  # display name
         0,  # Starting number
-        898,  # Ending number
+        1025,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -119,7 +119,7 @@ def script_properties():
         "team_member_dex_3",  # Setting identifier string
         "Member 3 (Dex No.)",  # display name
         0,  # Starting number
-        898,  # Ending number
+        1025,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -133,7 +133,7 @@ def script_properties():
         "team_member_dex_4",  # Setting identifier string
         "Member 4 (Dex No.)",  # display name
         0,  # Starting number
-        898,  # Ending number
+        1025,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -147,7 +147,7 @@ def script_properties():
         "team_member_dex_5",  # Setting identifier string
         "Member 5 (Dex No.)",  # display name
         0,  # Starting number
-        898,  # Ending number
+        1025,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -161,7 +161,7 @@ def script_properties():
         "team_member_dex_6",  # Setting identifier string
         "Member 6 (Dex No.)",  # display name
         0,  # Starting number
-        898,  # Ending number
+        1025,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(

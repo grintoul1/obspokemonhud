@@ -6,7 +6,6 @@
         "line": "shiny/rillaboom-gmax",
         "line": "cinderace-gmax",
         "line": "shiny/cinderace-gmax",
-        "line": ",
         "line": "The following Pokemon won't work, due to them not existing in",
         "line": "the games:",
         "line": "shiny/eevee-starter",
@@ -14,8 +13,8 @@
     },
     "cache_location": "showdown",
     "urls": {
-        "normal": "https://play.pokemonshowdown.com/sprites/gen5/",
-        "shiny": "https://play.pokemonshowdown.com/sprites/gen5-shiny/"
+        "normal": "https://play.pokemonshowdown.com/sprites/ani/",
+        "shiny": "https://play.pokemonshowdown.com/sprites/ani-shiny/"
     },
     "sprites": {
         "1": {

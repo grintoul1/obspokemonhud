@@ -76,7 +76,8 @@ def script_properties():
     )
     obs.obs_property_list_add_string(sprite_style, "", "")
     obs.obs_property_list_add_string(sprite_style, "home", "home")
-    obs.obs_property_list_add_string(sprite_style, "showdown", "showdown")
+    obs.obs_property_list_add_string(sprite_style, "showdown-animated", "showdown-animated")
+    obs.obs_property_list_add_string(sprite_style, "showdown-static", "showdown-static")
 
     # Team image locations.
     # Set up the settings and add in a blank value as the first value
@@ -184,7 +185,7 @@ def script_defaults(settings):
     obs.obs_data_set_default_int(settings, "sprite_width", 50)
 
     # Set the default sprite style as using the Showdown type
-    obs.obs_data_set_default_string(settings, "sprite_style", "showdown")
+    obs.obs_data_set_default_string(settings, "sprite_style", "showdown_animated")
 
 
 def script_update(settings):
