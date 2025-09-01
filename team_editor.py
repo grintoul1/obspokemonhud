@@ -94,6 +94,14 @@ def script_properties():
         1025,  # Ending number
         1,  # Increment by
     )
+    obs.obs_properties_add_int(
+        properties,  # The properties variable
+        "team_member_ball_1",  # Setting identifier string
+        "Member 1 (Ball No.)",  # display name
+        0,  # Starting number
+        27,  # Ending number
+        1,  # Increment by
+    )
     obs.obs_properties_add_bool(
         properties,  # The properties variable
         "team_member_shiny_1",  # Setting identifier string
@@ -106,6 +114,14 @@ def script_properties():
         "Member 2 (Dex No.)",  # display name
         0,  # Starting number
         1025,  # Ending number
+        1,  # Increment by
+    )
+    obs.obs_properties_add_int(
+        properties,  # The properties variable
+        "team_member_ball_2",  # Setting identifier string
+        "Member 2 (Ball No.)",  # display name
+        0,  # Starting number
+        27,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -122,6 +138,14 @@ def script_properties():
         1025,  # Ending number
         1,  # Increment by
     )
+    obs.obs_properties_add_int(
+        properties,  # The properties variable
+        "team_member_ball_3",  # Setting identifier string
+        "Member 3 (Ball No.)",  # display name
+        0,  # Starting number
+        27,  # Ending number
+        1,  # Increment by
+    )
     obs.obs_properties_add_bool(
         properties,  # The properties variable
         "team_member_shiny_3",  # Setting identifier string
@@ -134,6 +158,14 @@ def script_properties():
         "Member 4 (Dex No.)",  # display name
         0,  # Starting number
         1025,  # Ending number
+        1,  # Increment by
+    )
+    obs.obs_properties_add_int(
+        properties,  # The properties variable
+        "team_member_ball_4",  # Setting identifier string
+        "Member 4 (Ball No.)",  # display name
+        0,  # Starting number
+        27,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -150,6 +182,14 @@ def script_properties():
         1025,  # Ending number
         1,  # Increment by
     )
+    obs.obs_properties_add_int(
+        properties,  # The properties variable
+        "team_member_ball_5",  # Setting identifier string
+        "Member 5 (Ball No.)",  # display name
+        0,  # Starting number
+        27,  # Ending number
+        1,  # Increment by
+    )
     obs.obs_properties_add_bool(
         properties,  # The properties variable
         "team_member_shiny_5",  # Setting identifier string
@@ -162,6 +202,14 @@ def script_properties():
         "Member 6 (Dex No.)",  # display name
         0,  # Starting number
         1025,  # Ending number
+        1,  # Increment by
+    )
+    obs.obs_properties_add_int(
+        properties,  # The properties variable
+        "team_member_ball_6",  # Setting identifier string
+        "Member 6 (Ball No.)",  # display name
+        0,  # Starting number
+        27,  # Ending number
         1,  # Increment by
     )
     obs.obs_properties_add_bool(
@@ -208,6 +256,14 @@ def script_defaults(settings):
     obs.obs_data_set_default_bool(settings, "team_member_shiny_4", False)
     obs.obs_data_set_default_bool(settings, "team_member_shiny_5", False)
     obs.obs_data_set_default_bool(settings, "team_member_shiny_6", False)
+
+    # Team member ball no.
+    obs.obs_data_set_default_int(settings, "team_member_ball_1", 0)
+    obs.obs_data_set_default_int(settings, "team_member_ball_2", 0)
+    obs.obs_data_set_default_int(settings, "team_member_ball_3", 0)
+    obs.obs_data_set_default_int(settings, "team_member_ball_4", 0)
+    obs.obs_data_set_default_int(settings, "team_member_ball_5", 0)
+    obs.obs_data_set_default_int(settings, "team_member_ball_6", 0)
 
     # If debug is enabled, print out this bit of text
     if debug:
@@ -256,6 +312,13 @@ def script_update(settings):
         obs.obs_data_set_bool(settings, "team_member_shiny_5", new_team_data['slot5']['shiny'])
         obs.obs_data_set_bool(settings, "team_member_shiny_6", new_team_data['slot6']['shiny'])
 
+        obs.obs_data_set_bool(settings, "team_member_ball_1", new_team_data['slot1']['pokeball'])
+        obs.obs_data_set_bool(settings, "team_member_ball_2", new_team_data['slot2']['pokeball'])
+        obs.obs_data_set_bool(settings, "team_member_ball_3", new_team_data['slot3']['pokeball'])
+        obs.obs_data_set_bool(settings, "team_member_ball_4", new_team_data['slot4']['pokeball'])
+        obs.obs_data_set_bool(settings, "team_member_ball_5", new_team_data['slot5']['pokeball'])
+        obs.obs_data_set_bool(settings, "team_member_ball_6", new_team_data['slot6']['pokeball'])
+
     # Update the dex numbers
     team['slot1']['dexnumber'] = obs.obs_data_get_int(settings, "team_member_dex_1")
     team['slot2']['dexnumber'] = obs.obs_data_get_int(settings, "team_member_dex_2")
@@ -271,6 +334,14 @@ def script_update(settings):
     team['slot4']['shiny'] = obs.obs_data_get_bool(settings, "team_member_shiny_4")
     team['slot5']['shiny'] = obs.obs_data_get_bool(settings, "team_member_shiny_5")
     team['slot6']['shiny'] = obs.obs_data_get_bool(settings, "team_member_shiny_6")
+
+    # Update the dex numbers
+    team['slot1']['pokeball'] = obs.obs_data_get_int(settings, "team_member_ball_1")
+    team['slot2']['pokeball'] = obs.obs_data_get_int(settings, "team_member_ball_2")
+    team['slot3']['pokeball'] = obs.obs_data_get_int(settings, "team_member_ball_3")
+    team['slot4']['pokeball'] = obs.obs_data_get_int(settings, "team_member_ball_4")
+    team['slot5']['pokeball'] = obs.obs_data_get_int(settings, "team_member_ball_5")
+    team['slot6']['pokeball'] = obs.obs_data_get_int(settings, "team_member_ball_6")
 
     # If debug is enabled, print out this bit of text
     if debug:
