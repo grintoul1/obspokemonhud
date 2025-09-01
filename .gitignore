@@ -9,3 +9,6 @@ team*.json
 
 # To do files
 todo.txt
+cache/pokeballs/all-balls.png
+cache/pokeballs/all-balls.psd
+cache/pokeballs/poke-ball.jpg
